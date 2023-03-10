@@ -38,6 +38,7 @@ body {
     left: 2%;
     padding: 3px;
     cursor: pointer;
+
 }
 
 .slider {
@@ -48,13 +49,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.01s ease-in;
 }
 
-.slider::before {
-    content: "PAUSE";
+.slider-label {
     font-size: 10px;
     color: black;
-    transform: translateX(-130%);
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transition: all 0.01s ease-in;
+
 }
 
+.slider-pause {
+    transform: translateX(0);
+}
 
+.slider-label-pause {
+    transform: translateX(210%);
+}
